@@ -58,3 +58,37 @@
     });
   }
 })();
+
+// Formulario de demo: valida y abre un correo listo para enviar.
+(function () {
+  var form = document.getElementById('demo-form');
+  if (!form) return;
+  var errorBox = document.getElementById('form-error');
+  var done = document.getElementById('form-done');
+  var required = ['nombre', 'agencia', 'telefono', 'empleados', 'tipo'];
+  var labels = { nombre: 'Nombre', agencia: 'Agencia u hogar', telefono: 'Teléfono', email: 'Correo', empleados: 'Empleados', tipo: 'Tipo', mensaje: 'Qué quiere resolver' };
+
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    var ok = true;
+    required.forEach(function (name) {
+      var el = form.elements[name];
+      var empty = !el.value.trim();
+      el.closest('.field').classList.toggle('invalid', empty);
+      el.setAttribute('aria-invalid', empty ? 'true' : 'false');
+      if (empty && ok) { el.focus(); ok = false; }
+    });
+    errorBox.hidden = ok;
+    if (!ok) return;
+
+    var lines = Object.keys(labels).map(function (name) {
+      var v = form.elements[name].value.trim();
+      return v ? labels[name] + ': ' + v : null;
+    }).filter(Boolean);
+    var subject = 'Demo de ETNARA · ' + form.elements.agencia.value.trim();
+    var body = 'Hola, quiero una demostración de ETNARA.\n\n' + lines.join('\n');
+    window.location.href = 'mailto:etnaracare@gmail.com?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
+    form.hidden = true;
+    done.hidden = false;
+  });
+})();

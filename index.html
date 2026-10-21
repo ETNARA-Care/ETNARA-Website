@@ -1,10 +1,237 @@
-<!doctype html><html lang="es"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="ETNARA Care — plataforma para agencias de cuidado y establecimientos de adultos mayores."><title>ETNARA Care | Operación, cumplimiento y cuidado</title><link rel="stylesheet" href="./styles.css"></head><body>
-<header><a class="brand brand-official" href="#"><img src="data:image/jpeg;base64,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" alt="ETNARA Care logo"><span><b>ETNARA</b><small>Care</small></span></a><nav class="nav"><a href="#producto">Producto</a><a href="#soluciones">Soluciones</a><a href="#compliance">Compliance</a><a href="#verified">Verified</a></nav><div class="top-actions"><a href="https://etnara-care.github.io/ETNARAMVP/">Iniciar sesión</a><a class="button" href="#demo">Solicitar demo</a></div><button class="menu" aria-label="Abrir menú" aria-expanded="false">☰</button></header>
-<main><section class="hero"><div class="hero-copy"><div class="badge">PLATAFORMA PARA ORGANIZACIONES DE CUIDADO</div><h1>La operación de cuidado,<br><em>finalmente conectada.</em></h1><p>ETNARA reúne cumplimiento, personal, residentes y operaciones en una sola plataforma para agencias de cuidado y establecimientos de adultos mayores.</p><div class="hero-actions"><a class="button large" href="#demo">Solicitar demostración</a><a class="outline large" href="#producto">Explorar ETNARA →</a></div><div class="trustline"><span>✓ Organizaciones separadas</span><span>✓ Acceso por roles</span><span>✓ Documentación centralizada</span></div></div>
-<div class="product-shot"><div class="browser"><div class="browserbar"><i></i><i></i><i></i><span>ETNARA Care</span></div><div class="app"><aside><div class="appbrand">E</div><b>Inicio</b><span>Compliance</span><span>Personal</span><span>Residentes</span><span>Turnos</span><span>Incidentes</span><span>Documentos</span></aside><div class="dash"><div class="dashhead"><div><small>CASA DEMO</small><h3>Buenos días</h3><p>Esto es lo que requiere tu atención hoy.</p></div><div class="avatar">AD</div></div><div class="metrics"><article><small>Compliance</small><strong>92%</strong><span>Estado general</span></article><article><small>Personal activo</small><strong>24</strong><span>3 requieren atención</span></article><article><small>Residentes</small><strong>18</strong><span>Expedientes activos</span></article></div><div class="dashgrid"><div class="panel"><div class="paneltitle"><b>Requiere atención</b><span>Ver todo</span></div><div class="task"><i class="warn"></i><div><b>Credencial próxima a vencer</b><small>María González · CPR</small></div><strong>12 días</strong></div><div class="task"><i></i><div><b>Documento pendiente</b><small>Expediente de residente</small></div><strong>Hoy</strong></div><div class="task"><i class="ok"></i><div><b>Turno confirmado</b><small>7:00 AM – 3:00 PM</small></div><strong>Activo</strong></div></div><div class="panel compact"><b>Estado de documentos</b><div class="ring">87<small>%</small></div><span>Al día</span></div></div></div></div></div><div class="float-card fc1"><span>✓</span><div><b>Credencial validada</b><small>Expediente actualizado</small></div></div><div class="float-card fc2"><span>18</span><div><b>Residentes</b><small>Visión centralizada</small></div></div></div></section>
-<section class="logos"><span>UNA PLATAFORMA PARA</span><b>Agencias de cuidado</b><i></i><b>Hogares y establecimientos</b><i></i><b>Equipos de cuidado</b></section>
-<section class="human-story"><div class="human-photo"><img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=1400&q=86" alt="Profesional de cuidado utilizando tecnología"></div><div class="human-copy"><span class="eyebrow">TECNOLOGÍA CON PROPÓSITO</span><h2>Menos tiempo persiguiendo información. Más tiempo dedicado al cuidado.</h2><p>ETNARA conecta a las personas que administran, coordinan y ofrecen cuidado con la información que necesitan para trabajar mejor.</p><div class="human-points"><span>Personal</span><span>Residentes</span><span>Familias</span><span>Operación</span></div></div></section><section class="platform" id="producto"><div class="section-head"><div><span class="eyebrow">UNA SOLA FUENTE DE INFORMACIÓN</span><h2>Todo lo que tu organización necesita para operar con claridad.</h2></div><p>Deja atrás expedientes dispersos, hojas de cálculo y procesos desconectados. ETNARA organiza la operación alrededor de tu organización.</p></div><div class="feature-grid"><article class="feature primary"><div class="feature-icon">✓</div><h3>ETNARA Compliance</h3><p>Controla documentos, credenciales, requisitos y vencimientos desde un solo lugar.</p><div class="mini-ui"><div><b>Requisitos</b><span>Estado</span></div><p>Licencia sanitaria <strong class="good">Vigente</strong></p><p>Certificación CPR <strong class="soon">12 días</strong></p><p>Antecedentes <strong class="good">Vigente</strong></p></div><a href="#compliance">Conocer Compliance →</a></article><article class="feature"><div class="feature-icon">♡</div><h3>ETNARA Care</h3><p>Conecta residentes, planes de cuidado, actividades e incidentes con quienes necesitan la información.</p><div class="people"><span>MG</span><span>JR</span><span>LC</span><b>+15</b></div><a href="#soluciones">Explorar Care →</a></article><article class="feature"><div class="feature-icon">↗</div><h3>Workforce & Operations</h3><p>Personal, elegibilidad, disponibilidad y turnos en un flujo operacional integrado.</p><div class="schedule"><span>7 AM</span><i></i><b>María G. · Turno confirmado</b></div><a href="#soluciones">Explorar operaciones →</a></article><article class="feature dark" id="verified"><div class="feature-icon">◇</div><h3>ETNARA Verified</h3><p>Una capa de validación para convertir documentación y credenciales en señales claras de confianza.</p><div class="verified">ETNARA <b>VERIFIED</b><span>✓</span></div><a href="#demo">Descubrir Verified →</a></article></div></section>
-<section class="split" id="compliance"><div class="split-copy"><span class="eyebrow">COMPLIANCE SIN CAOS</span><h2>Sabe qué está al día antes de que se convierta en un problema.</h2><p>Visualiza requisitos de la organización y del personal, identifica vencimientos y mantén los expedientes organizados para revisión.</p><div class="checks"><p>✓ Visibilidad de documentos vigentes y vencidos</p><p>✓ Credenciales vinculadas al personal</p><p>✓ Alertas de requisitos que necesitan atención</p><p>✓ Separación de datos por organización</p></div></div><div class="compliance-ui"><div class="c-head"><div><small>COMPLIANCE</small><h3>Estado de la organización</h3></div><strong>94%</strong></div><div class="progress"><i></i></div><div class="c-row"><span>Documentos del establecimiento</span><b>12 / 12</b><em>Completo</em></div><div class="c-row"><span>Credenciales del personal</span><b>46 / 49</b><em class="attention">3 pendientes</em></div><div class="c-row"><span>Expedientes de residentes</span><b>17 / 18</b><em class="attention">1 pendiente</em></div></div></section>
-<section class="roles" id="soluciones"><span class="eyebrow">UNA PLATAFORMA. DIFERENTES EXPERIENCIAS.</span><h2>La información correcta para cada persona.</h2><div class="role-tabs"><article><b>Administrador</b><p>Supervisa compliance, personal, residentes y operación.</p></article><article><b>Supervisor</b><p>Coordina equipos, elegibilidad y actividades diarias.</p></article><article><b>Cuidador</b><p>Recibe turnos y registra el cuidado desde su experiencia.</p></article><article><b>Familia</b><p>Accede a la información que la organización comparte.</p></article></div></section>
-<section class="cta" id="demo"><span>ETNARA CARE</span><h2>Una mejor forma de operar el cuidado empieza aquí.</h2><p>Conoce cómo ETNARA puede ayudar a tu organización a trabajar con más claridad, control y confianza.</p><a class="button light" href="mailto:etnaracare@gmail.com?subject=Solicitud%20de%20demostración%20ETNARA">Solicitar demostración</a></section></main>
-<footer><a class="brand brand-official footer-brand" href="#"><img src="data:image/jpeg;base64,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" alt="ETNARA Care logo"><span><b>ETNARA</b><small>Care</small></span></a><p>Plataforma de tecnología para organizaciones de cuidado.</p><div><span>© 2026 ETNARA Care</span><a href="https://etnara-care.github.io/ETNARAMVP/">Acceso a plataforma</a></div></footer><script src="./script.js"></script></body></html>
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="ETNARA Care conecta personal, turnos, residentes, incidentes, cumplimiento y familias en un solo sistema para agencias de cuidado y hogares de adultos mayores.">
+<meta name="theme-color" content="#092B57">
+<title>ETNARA Care | Toda tu agencia, en un solo lugar</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,400&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap header-row">
+    <a class="brand" href="#" aria-label="ETNARA Care, inicio">
+      <span class="iso" aria-hidden="true"><span class="iso-e">E</span><span class="iso-bar"></span></span>
+      <span class="wordmark"><b>ETNARA</b><i>Care</i></span>
+    </a>
+    <nav class="nav" aria-label="Principal">
+      <a href="#plataforma">Plataforma</a>
+      <a href="#smartmatch">SmartMatch</a>
+      <a href="#roles">Familias</a>
+      <a href="#cumplimiento">Cumplimiento</a>
+    </nav>
+    <div class="header-actions">
+      <a class="link-light" href="https://etnara-care.github.io/ETNARAMVP/">Entrar</a>
+      <a class="pill pill-cream" href="#demo">Pedir demo</a>
+    </div>
+    <button class="menu" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="menu-movil">
+      <svg class="icon-open" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      <svg class="icon-close" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
+    </button>
+  </div>
+  <div class="mobile-menu" id="menu-movil">
+    <a href="#plataforma">Plataforma</a>
+    <a href="#smartmatch">SmartMatch</a>
+    <a href="#roles">Familias</a>
+    <a href="#cumplimiento">Cumplimiento</a>
+    <a href="https://etnara-care.github.io/ETNARAMVP/">Entrar</a>
+    <a class="pill pill-cream" href="#demo">Pedir demo</a>
+  </div>
+</header>
+
+<main>
+<section class="hero">
+  <svg class="hero-mark" viewBox="0 0 400 400" aria-hidden="true"><text x="200" y="320" text-anchor="middle">E</text></svg>
+  <div class="wrap hero-grid">
+    <div class="hero-copy">
+      <p class="chip"><span>Hecho en PR</span>Para agencias de cuidado y hogares de adultos mayores</p>
+      <h1>Toda tu agencia, <em>en un solo lugar.</em></h1>
+      <p class="lead">Personal, turnos, residentes, incidentes, cumplimiento y familias, conectados en un sistema hecho para agencias de cuidado. Deja atrás los grupos de WhatsApp, las libretas y las hojas de cálculo.</p>
+      <div class="actions">
+        <a class="pill pill-cream pill-lg" href="#demo">Pedir una demostración
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+        <a class="pill pill-ghost pill-lg" href="#plataforma">Ver cómo funciona</a>
+      </div>
+      <ul class="trust">
+        <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>Datos separados por organización</li>
+        <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="8" r="4"/><path d="M2 21a7 7 0 0 1 14 0M16 4a4 4 0 0 1 0 8M22 21a7 7 0 0 0-4-6.3"/></svg>Una vista para cada rol</li>
+        <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15 15 0 0 1 0 20a15 15 0 0 1 0-20"/></svg>En español</li>
+      </ul>
+    </div>
+
+    <div class="hero-visual">
+      <div class="today-card">
+        <div class="card-head">
+          <div><p class="kicker">HOY EN TU AGENCIA</p><p class="card-title">Hogar Las Palmas</p></div>
+          <span class="tag tag-sand">Datos ficticios</span>
+        </div>
+        <div class="stats">
+          <div><span>Turnos cubiertos</span><strong data-count="11">11</strong><small>/ 12</small></div>
+          <div><span>Personal en turno</span><strong data-count="9">9</strong></div>
+          <div><span>Residentes</span><strong data-count="18">18</strong></div>
+          <div><span>Cumplimiento</span><strong data-count="94">94</strong><small>%</small></div>
+        </div>
+        <p class="kicker feed-title">ACTIVIDAD</p>
+        <ul class="feed">
+          <li><span class="ico ico-green"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg></span><p><b>Carlos M.</b> marcó entrada en casa de Doña Carmen</p><time>7:02</time></li>
+          <li><span class="ico ico-clay"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 9v4M12 17h.01M10.3 3.9L1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0z"/></svg></span><p><b>Incidente</b> registrado · supervisora notificada</p><time>8:40</time></li>
+          <li><span class="ico ico-gold"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></span><p><b>Turno de 3 p. m.</b> sin cubrir · 2 solicitudes</p><time>9:15</time></li>
+        </ul>
+      </div>
+      <div class="float-card">
+        <span class="float-ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 0 0-7.8 7.8l1 1.1L12 21l7.8-7.5 1-1.1a5.5 5.5 0 0 0 0-7.8z"/></svg></span>
+        <div><b>La familia de Doña Carmen</b><span>vio el resumen de hoy · 9:30 a. m.</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="plataforma">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <h2>Cuatro áreas, <em>un solo sistema.</em></h2>
+      <p>Lo que pasa en un turno se conecta con el expediente, con la supervisora y con la familia. Sin copiar lo mismo en tres sitios.</p>
+    </div>
+    <div class="pillars">
+      <article class="pillar reveal">
+        <span class="pillar-ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="8" r="4"/><path d="M2 21a7 7 0 0 1 14 0M16 4a4 4 0 0 1 0 8M22 21a7 7 0 0 0-4-6.3"/></svg></span>
+        <h3>Personal y turnos</h3>
+        <p>Horarios, entradas y salidas, disponibilidad y turnos por cubrir.</p>
+      </article>
+      <article class="pillar reveal">
+        <span class="pillar-ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10.5L12 3l9 7.5M5 9.5V21h14V9.5M9 21v-6h6v6"/></svg></span>
+        <h3>Residentes y cuidado</h3>
+        <p>Planes de cuidado, actividades e incidentes de cada persona que atiendes.</p>
+      </article>
+      <article class="pillar reveal">
+        <span class="pillar-ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg></span>
+        <h3>Cumplimiento</h3>
+        <p>Documentos y credenciales al día, con alertas y acceso temporal para inspectores.</p>
+      </article>
+      <article class="pillar pillar-dark reveal">
+        <span class="pillar-ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 0 0-7.8 7.8l1 1.1L12 21l7.8-7.5 1-1.1a5.5 5.5 0 0 0 0-7.8z"/></svg></span>
+        <h3>Familias</h3>
+        <p>La familia ve lo que la agencia decide compartir, sin llamadas a cada rato.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="section section-sand" id="roles">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <h2>Una vista para <em>cada persona.</em></h2>
+      <p>Cada quien ve solo lo que le toca. La agencia decide qué se comparte y con quién.</p>
+    </div>
+    <div class="roles">
+      <article class="reveal"><p class="role-num">01</p><h3>Administración</h3><p>La operación completa: personal, residentes, turnos, incidentes y cumplimiento.</p></article>
+      <article class="reveal"><p class="role-num">02</p><h3>Supervisión</h3><p>Coordina el equipo del día, cubre turnos y atiende incidentes a tiempo.</p></article>
+      <article class="reveal"><p class="role-num">03</p><h3>Cuidadores</h3><p>Sus turnos, entrada y salida, y el registro del cuidado desde el celular.</p></article>
+      <article class="reveal"><p class="role-num">04</p><h3>Familias</h3><p>Un resumen claro de cómo está su ser querido y un canal directo con la agencia.</p></article>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="smartmatch">
+  <div class="wrap">
+    <div class="sm-box">
+      <div class="sm-copy reveal">
+        <p class="kicker kicker-navy">ETNARA SMARTMATCH <span class="soon">PRÓXIMAMENTE</span></p>
+        <h2>Un turno vacío no debería ser <em>una emergencia.</em></h2>
+        <p class="sm-lead">Publica el servicio y tus cuidadores elegibles cerca solicitan cubrirlo. Tú escoges y apruebas. Nadie queda asignado automáticamente.</p>
+        <ol class="sm-steps">
+          <li><span>1</span><div><b>Publicas el servicio</b><p>Horario, lugar y requisitos.</p></div></li>
+          <li><span>2</span><div><b>SmartMatch encuentra a quién</b><p>Credenciales vigentes y a 25 minutos o menos en auto.</p></div></li>
+          <li><span>3</span><div><b>Ellos solicitan, tú apruebas</b><p>El servicio se reserva y los demás reciben aviso.</p></div></li>
+          <li><span><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="11" width="16" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg></span><div><b>El paciente queda protegido</b><p>Sin nombre, dirección ni expediente hasta que apruebes.</p></div></li>
+        </ol>
+      </div>
+      <div class="sm-visual reveal">
+        <div class="phone">
+          <div class="phone-screen">
+            <span class="notch" aria-hidden="true"></span>
+            <p class="kicker">PARA TI · CUIDADOR</p>
+            <p class="phone-title">Servicios cerca</p>
+            <span class="tag tag-green">Hasta 25 min en auto</span>
+            <div class="job">
+              <div class="row"><b>Cuido domiciliario</b><span class="tag tag-green">Nuevo</span></div>
+              <p>Carolina · 18 min</p>
+              <p>Lun a vie · 8:00 a. m. – 4:00 p. m.</p>
+              <span class="fake-btn">Solicitar</span>
+            </div>
+            <div class="job job-muted">
+              <b>Turno nocturno</b>
+              <p>Trujillo Alto · 22 min</p>
+            </div>
+            <p class="fineprint">Ejemplo con datos ficticios</p>
+          </div>
+        </div>
+        <div class="agency-card">
+          <div class="row"><span class="kicker">AGENCIA · #ET-1042</span><span class="tag tag-gold">3 interesados</span></div>
+          <div class="cand"><span class="av av-green">MR</span><div><b>María R.</b><span>12 min · credenciales vigentes</span></div></div>
+          <div class="cand"><span class="av av-lilac">CM</span><div><b>Carlos M.</b><span>19 min · credenciales vigentes</span></div></div>
+          <span class="fake-btn fake-btn-outline">Aprobar a María</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section-sand" id="cumplimiento">
+  <div class="wrap split">
+    <div class="reveal">
+      <h2>Cuando llega la inspección, <em>ya está todo.</em></h2>
+      <p class="split-lead">Documentos y credenciales de la agencia, el personal y los residentes, con alertas antes de que algo venza.</p>
+      <ul class="checks">
+        <li>Documentos vigentes y vencidos a simple vista</li>
+        <li>Credenciales vinculadas a cada empleado</li>
+        <li>Alertas antes del vencimiento</li>
+        <li>Enlace temporal para inspectores, con registro de quién entró</li>
+      </ul>
+    </div>
+    <div class="ready-card reveal">
+      <div class="card-head">
+        <div><p class="kicker">PREPARACIÓN PARA INSPECCIÓN</p><p class="card-title">Hogar Las Palmas</p></div>
+        <div class="ring" style="--p:94"><span>94<small>%</small></span></div>
+      </div>
+      <div class="doc"><i class="dot dot-clay"></i><div><b>Certificación CPR · María G.</b><span>Vence el 2 de noviembre</span></div><em class="tag tag-clay">12 días</em></div>
+      <div class="doc"><i class="dot dot-gold"></i><div><b>Plan de cuidado · Residente 14</b><span>Falta firma de la familia</span></div><em class="tag tag-gold">Pendiente</em></div>
+      <div class="doc"><i class="dot dot-green"></i><div><b>Licencia del establecimiento</b><span>Vigente hasta marzo 2027</span></div><em class="tag tag-green">Vigente</em></div>
+      <div class="inspector"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.5.5l3-3a5 5 0 0 0-7-7l-1.7 1.7"/><path d="M14 11a5 5 0 0 0-7.5-.5l-3 3a5 5 0 0 0 7 7l1.7-1.7"/></svg>Enlace para inspector · expira en 5 días</div>
+      <p class="fineprint">Ejemplo con datos ficticios</p>
+    </div>
+  </div>
+</section>
+
+<section class="cta" id="demo">
+  <div class="wrap reveal">
+    <h2>Menos llamadas, menos papeles, <em>más cuidado.</em></h2>
+    <p>Te mostramos ETNARA con tu propia agencia en una llamada corta.</p>
+    <a class="pill pill-cream pill-lg" href="mailto:etnaracare@gmail.com?subject=Quiero%20una%20demostraci%C3%B3n%20de%20ETNARA">Pedir una demostración</a>
+  </div>
+</section>
+</main>
+
+<footer class="footer">
+  <div class="wrap footer-row">
+    <a class="brand" href="#" aria-label="ETNARA Care, inicio">
+      <span class="iso" aria-hidden="true"><span class="iso-e">E</span><span class="iso-bar"></span></span>
+      <span class="wordmark"><b>ETNARA</b><i>Care</i></span>
+    </a>
+    <p>Tecnología para organizaciones de cuidado en Puerto Rico.</p>
+  </div>
+  <div class="wrap footer-bottom">
+    <span>© 2026 ETNARA Care</span>
+    <a href="https://etnara-care.github.io/ETNARAMVP/">Acceso a la plataforma</a>
+  </div>
+</footer>
+
+<script src="./script.js"></script>
+</body>
+</html>

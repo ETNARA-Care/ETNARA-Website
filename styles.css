@@ -219,3 +219,23 @@ section[id]{scroll-margin-top:76px}
   .doc{flex-wrap:wrap}
   .roles article{padding-right:0}
 }
+
+/* Formulario de demo */
+.demo-form{max-width:720px;margin:0 auto;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px 18px;text-align:left}
+.field{display:flex;flex-direction:column;gap:7px}
+.field-wide{grid-column:1/-1}
+.field label{font-size:14px;font-weight:500;color:var(--cream)}
+.field label span{color:var(--on-navy);font-weight:400}
+.field input,.field select,.field textarea{font:inherit;font-size:16px;color:var(--ink);background:var(--cream);border:2px solid transparent;border-radius:12px;padding:13px 14px;min-height:48px;box-sizing:border-box;width:100%}
+.field textarea{resize:vertical;min-height:96px}
+.field input:focus,.field select:focus,.field textarea:focus{outline:none;border-color:var(--sage-light)}
+.field.invalid input,.field.invalid select{border-color:#E7A08A}
+.demo-form button.pill{justify-self:center;margin-top:6px;border:0;cursor:pointer;font-family:inherit}
+.form-error{grid-column:1/-1;margin:0;background:#5A2A26;color:#FBE3DC;border-radius:10px;padding:10px 14px;font-size:14px}
+.form-note{margin:0 !important;text-align:center;font-size:13px !important;color:var(--on-navy)}
+.form-done{max-width:560px;margin:0 auto;background:rgba(247,244,236,.08);border:1px solid var(--navy-line);border-radius:16px;padding:22px}
+.form-done p{margin:0 !important}
+.form-done .done-title{font-family:var(--serif);font-size:26px;color:var(--cream);margin-bottom:8px !important}
+.form-done a{color:var(--sage-light);text-decoration:underline}
+@media (max-width:560px){.demo-form{grid-template-columns:1fr}.demo-form button.pill{width:100%}}
+.demo-form[hidden],.form-error[hidden],.form-done[hidden]{display:none}

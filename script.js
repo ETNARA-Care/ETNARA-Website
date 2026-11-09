@@ -61,6 +61,7 @@
 
 // Formulario de demo: valida y abre un correo listo para enviar.
 (function () {
+  var TO = 'contacto@etnaracare.com';
   var form = document.getElementById('demo-form');
   if (!form) return;
   var errorBox = document.getElementById('form-error');
@@ -85,10 +86,34 @@
       var v = form.elements[name].value.trim();
       return v ? labels[name] + ': ' + v : null;
     }).filter(Boolean);
-    var subject = 'Demo de ETNARA · ' + form.elements.agencia.value.trim();
+    var founding = form.elements.fundadora && form.elements.fundadora.checked;
+    if (founding) lines.push('Programa: quiere participar en Agencias Fundadoras');
+    var subject = (founding ? 'Agencias Fundadoras · ' : 'Demo de ETNARA · ') + form.elements.agencia.value.trim();
     var body = 'Hola, quiero una demostración de ETNARA.\n\n' + lines.join('\n');
-    window.location.href = 'mailto:etnaracare@gmail.com?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
+    var mailto = 'mailto:' + TO + '?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
+    // Respaldo visible: si el teléfono no tiene correo configurado, la persona copia el mensaje.
+    var box = document.getElementById('done-message');
+    if (box) box.value = 'Para: ' + TO + '\nAsunto: ' + subject + '\n\n' + body;
+    var again = document.getElementById('mail-again');
+    if (again) again.href = mailto;
     form.hidden = true;
     done.hidden = false;
+    window.location.href = mailto;
+  });
+
+  var copy = document.getElementById('copy-message');
+  if (copy) copy.addEventListener('click', function () {
+    var box = document.getElementById('done-message');
+    var ok = function () { copy.textContent = 'Mensaje copiado'; };
+    if (navigator.clipboard && window.isSecureContext) {
+      navigator.clipboard.writeText(box.value).then(ok, function () { box.select(); document.execCommand('copy'); ok(); });
+    } else { box.select(); document.execCommand('copy'); ok(); }
+  });
+
+  // «Reservar mi cupo» marca la casilla del programa.
+  document.querySelectorAll('[data-fundadora]').forEach(function (link) {
+    link.addEventListener('click', function () {
+      if (form.elements.fundadora) form.elements.fundadora.checked = true;
+    });
   });
 })();

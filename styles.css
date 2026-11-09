@@ -239,3 +239,28 @@ section[id]{scroll-margin-top:76px}
 .form-done a{color:var(--sage-light);text-decoration:underline}
 @media (max-width:560px){.demo-form{grid-template-columns:1fr}.demo-form button.pill{width:100%}}
 .demo-form[hidden],.form-error[hidden],.form-done[hidden]{display:none}
+
+/* Ajustes de lanzamiento (nov-2026) */
+.soon-inline{font-size:11px;font-weight:600;margin-left:6px;vertical-align:1px}
+#fundadoras .section-head .kicker{margin-bottom:14px}
+#fundadoras .pillar h3{margin-top:0}
+.privacy-note{display:flex;gap:14px;align-items:flex-start;margin-top:24px;background:var(--sand);border:1px solid var(--line);border-radius:20px;padding:22px 24px;color:var(--ink)}
+.privacy-note svg{flex:none;color:var(--sage-ink);margin-top:2px}
+.privacy-note p{margin:0;font-size:15px;line-height:1.6;color:var(--muted)}
+.privacy-note b{color:var(--ink)}
+.founding-cta{display:flex;flex-wrap:wrap;align-items:center;gap:16px;margin-top:32px}
+.founding-cta span{font-size:14px;color:var(--muted)}
+.pill-navy{background:var(--navy);color:var(--cream)}
+.pill-navy:hover{background:var(--navy-soft)}
+.check-field{display:flex;gap:12px;align-items:center;justify-content:center;font-size:15px;color:var(--cream);cursor:pointer;text-align:left}
+.check-field input{width:22px;height:22px;flex:none;accent-color:var(--sage);margin:0}
+.done-message{display:block;width:100%;box-sizing:border-box;margin-top:16px;font:inherit;font-size:14px;line-height:1.5;color:var(--ink);background:var(--cream);border:0;border-radius:12px;padding:12px 14px;resize:vertical}
+.done-actions{display:flex;flex-wrap:wrap;gap:12px;justify-content:center;margin-top:16px}
+.done-actions .pill{border:0;cursor:pointer;font-family:inherit}
+.done-actions .pill-ghost{border:1px solid #3B6491}
+.footer-links{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:8px 28px;font-size:14px}
+.footer-links li{display:flex;gap:8px}
+.footer-links span{color:#8295A8}
+.footer-links a{color:var(--cream)}
+.footer-links a:hover{color:var(--sage-light)}
+@media (max-width:560px){.founding-cta .pill{width:100%;justify-content:center}.footer-links{flex-direction:column}.check-field{justify-content:flex-start}}

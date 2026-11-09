@@ -7,6 +7,8 @@
 <meta name="theme-color" content="#092B57">
 <title>ETNARA Care | Toda tu agencia, en un solo lugar</title>
 <link rel="canonical" href="https://etnaracare.com/">
+<link rel="icon" href="./favicon.svg?v=1" type="image/svg+xml">
+<link rel="apple-touch-icon" href="./apple-touch-icon.png?v=1">
 
 <!-- Vista previa al compartir (Open Graph: Facebook, Messenger, WhatsApp, LinkedIn, iMessage) -->
 <meta property="og:type" content="website">
@@ -31,7 +33,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,400&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="./styles.css?v=3">
+<link rel="stylesheet" href="./styles.css?v=4">
 </head>
 <body>
 
@@ -46,9 +48,10 @@
       <a href="#smartmatch">SmartMatch</a>
       <a href="#roles">Familias</a>
       <a href="#cumplimiento">Cumplimiento</a>
+      <a href="#fundadoras">Fundadoras</a>
     </nav>
     <div class="header-actions">
-      <a class="link-light" href="https://etnara-care.github.io/ETNARAMVP/">Entrar</a>
+      <a class="link-light" href="https://app.etnaracare.com/">Entrar</a>
       <a class="pill pill-cream" href="#demo">Pedir demo</a>
     </div>
     <button class="menu" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="menu-movil">
@@ -61,7 +64,8 @@
     <a href="#smartmatch">SmartMatch</a>
     <a href="#roles">Familias</a>
     <a href="#cumplimiento">Cumplimiento</a>
-    <a href="https://etnara-care.github.io/ETNARAMVP/">Entrar</a>
+    <a href="#fundadoras">Fundadoras</a>
+    <a href="https://app.etnaracare.com/">Entrar</a>
     <a class="pill pill-cream" href="#demo">Pedir demo</a>
   </div>
 </header>
@@ -134,7 +138,7 @@
       <article class="pillar reveal">
         <span class="pillar-ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg></span>
         <h3>Cumplimiento</h3>
-        <p>Documentos y credenciales al día, con alertas y acceso temporal para inspectores.</p>
+        <p>Documentos y credenciales al día, con alertas antes de que venzan.</p>
       </article>
       <article class="pillar pillar-dark reveal">
         <span class="pillar-ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 0 0-7.8 7.8l1 1.1L12 21l7.8-7.5 1-1.1a5.5 5.5 0 0 0 0-7.8z"/></svg></span>
@@ -214,7 +218,7 @@
         <li>Documentos vigentes y vencidos a simple vista</li>
         <li>Credenciales vinculadas a cada empleado</li>
         <li>Alertas antes del vencimiento</li>
-        <li>Enlace temporal para inspectores, con registro de quién entró</li>
+        <li>Enlace temporal para inspectores <span class="soon soon-inline">Próximamente</span></li>
       </ul>
     </div>
     <div class="ready-card reveal">
@@ -222,12 +226,33 @@
         <div><p class="kicker">PREPARACIÓN PARA INSPECCIÓN</p><p class="card-title">Hogar Las Palmas</p></div>
         <div class="ring" style="--p:94"><span>94<small>%</small></span></div>
       </div>
-      <div class="doc"><i class="dot dot-clay"></i><div><b>Certificación CPR · María G.</b><span>Vence el 2 de noviembre</span></div><em class="tag tag-clay">12 días</em></div>
-      <div class="doc"><i class="dot dot-gold"></i><div><b>Plan de cuidado · Residente 14</b><span>Falta firma de la familia</span></div><em class="tag tag-gold">Pendiente</em></div>
+      <div class="doc"><i class="dot dot-clay"></i><div><b>Certificación CPR · María G.</b><span>Vence en 12 días</span></div><em class="tag tag-clay">12 días</em></div>
+      <div class="doc"><i class="dot dot-gold"></i><div><b>Póliza de seguro</b><span>Vencimiento no informado</span></div><em class="tag tag-gold">Revisar</em></div>
       <div class="doc"><i class="dot dot-green"></i><div><b>Licencia del establecimiento</b><span>Vigente hasta marzo 2027</span></div><em class="tag tag-green">Vigente</em></div>
-      <div class="inspector"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.5.5l3-3a5 5 0 0 0-7-7l-1.7 1.7"/><path d="M14 11a5 5 0 0 0-7.5-.5l-3 3a5 5 0 0 0 7 7l1.7-1.7"/></svg>Enlace para inspector · expira en 5 días</div>
+      <div class="inspector"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.5.5l3-3a5 5 0 0 0-7-7l-1.7 1.7"/><path d="M14 11a5 5 0 0 0-7.5-.5l-3 3a5 5 0 0 0 7 7l1.7-1.7"/></svg>Enlace para inspectores · próximamente</div>
       <p class="fineprint">Ejemplo con datos ficticios</p>
     </div>
+  </div>
+</section>
+
+<section class="section" id="fundadoras">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <p class="kicker kicker-navy">PROGRAMA AGENCIAS FUNDADORAS</p>
+      <h2>Diez agencias para <em>construirlo juntos.</em></h2>
+      <p>Buscamos las primeras 10 agencias y hogares de Puerto Rico que quieran dejar atrás el papel y ayudarnos a dar forma a ETNARA.</p>
+    </div>
+    <div class="pillars">
+      <article class="pillar reveal"><h3>Configuración acompañada</h3><p>Te ayudamos a cargar tu personal, tus residentes y tus documentos desde el primer día.</p></article>
+      <article class="pillar reveal"><h3>Capacitación de tu equipo</h3><p>Sesiones en español para administración, supervisión y cuidadores.</p></article>
+      <article class="pillar reveal"><h3>Soporte directo</h3><p>Un canal directo con el equipo de ETNARA durante todo el piloto.</p></article>
+      <article class="pillar pillar-dark reveal"><h3>Tu voz en el producto</h3><p>Tus sugerencias guían lo que construimos después.</p></article>
+    </div>
+    <div class="privacy-note reveal">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="11" width="16" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg>
+      <p><b>Los datos de tu agencia son de tu agencia.</b> ETNARA no los vende ni los usa para publicidad. Cada organización tiene sus datos separados y cada persona ve solo lo que le corresponde.</p>
+    </div>
+    <div class="founding-cta reveal"><a class="pill pill-navy pill-lg" href="#demo" data-fundadora>Reservar mi cupo</a><span>Cupos limitados</span></div>
   </div>
 </section>
 
@@ -275,13 +300,22 @@
         <label for="f-mensaje">¿Qué te gustaría resolver? <span>(opcional)</span></label>
         <textarea id="f-mensaje" name="mensaje" rows="3"></textarea>
       </div>
+      <label class="check-field field-wide" for="f-fundadora">
+        <input id="f-fundadora" name="fundadora" type="checkbox">
+        <span>Quiero participar en el programa de Agencias Fundadoras</span>
+      </label>
       <p class="form-error" id="form-error" role="alert" hidden>Completa tu nombre, la agencia, el teléfono y las dos opciones.</p>
       <button class="pill pill-cream pill-lg field-wide" type="submit">Pedir una demostración</button>
-      <p class="form-note field-wide">Al enviar se abrirá tu correo con el mensaje listo. Solo tienes que tocar Enviar.</p>
+      <p class="form-note field-wide">Al enviar se abrirá tu correo con el mensaje listo para <b>contacto@etnaracare.com</b>. Solo tienes que tocar Enviar.</p>
     </form>
     <div class="form-done" id="form-done" hidden>
       <p class="done-title">¡Gracias! Ya casi está.</p>
-      <p>Si tu correo no se abrió, escríbenos a <a href="mailto:etnaracare@gmail.com">etnaracare@gmail.com</a>.</p>
+      <p>Si tu correo no se abrió, copia el mensaje y envíalo a <a href="mailto:contacto@etnaracare.com">contacto@etnaracare.com</a>.</p>
+      <textarea id="done-message" class="done-message" rows="6" readonly aria-label="Tu mensaje"></textarea>
+      <div class="done-actions">
+        <button class="pill pill-cream" type="button" id="copy-message">Copiar mensaje</button>
+        <a class="pill pill-ghost" id="mail-again" href="mailto:contacto@etnaracare.com">Abrir mi correo</a>
+      </div>
     </div>
   </div>
 </section>
@@ -294,13 +328,17 @@
       <span class="wordmark"><b>ETNARA</b><i>Care</i></span>
     </a>
     <p>Tecnología para organizaciones de cuidado en Puerto Rico.</p>
+    <ul class="footer-links">
+      <li><span>Contacto</span><a href="mailto:contacto@etnaracare.com">contacto@etnaracare.com</a></li>
+      <li><span>Soporte</span><a href="mailto:soporte@etnaracare.com">soporte@etnaracare.com</a></li>
+    </ul>
   </div>
   <div class="wrap footer-bottom">
-    <span>© 2026 ETNARA Care</span>
-    <a href="https://etnara-care.github.io/ETNARAMVP/">Acceso a la plataforma</a>
+    <span>© 2026 De La Vega Technology LLC. ETNARA Care es una marca de De La Vega Technology LLC.</span>
+    <a href="https://app.etnaracare.com/">Acceso a la plataforma</a>
   </div>
 </footer>
 
-<script src="./script.js?v=3"></script>
+<script src="./script.js?v=4"></script>
 </body>
 </html>

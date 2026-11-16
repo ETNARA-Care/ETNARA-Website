@@ -61,8 +61,9 @@
 
 // Formulario de demo.
 // FORM_ENDPOINT vacío: valida y abre un correo listo para enviar (comportamiento de siempre).
-// FORM_ENDPOINT con la dirección del servicio de envío aprobado: envía la solicitud directamente
-// (POST JSON) y muestra «Recibido». Si el envío falla, cae al correo como respaldo: nunca se pierde.
+// FORM_ENDPOINT con la dirección del backend de ETNARA (ver docs/formulario-backend.md): envía la
+// solicitud (POST JSON) y muestra «¡Recibido!» SOLO cuando el servidor confirma {"ok":true}.
+// 429 = demasiadas solicitudes (mensaje propio). Cualquier otro fallo cae al correo como respaldo.
 (function () {
   var FORM_ENDPOINT = '';
   var TO = 'contacto@etnaracare.com';
@@ -114,9 +115,10 @@
       window.location.href = mailto;
     };
     if (!FORM_ENDPOINT) { byMail(); return; }
-    // Campo trampa: una persona no lo ve; si viene lleno, no se envía nada.
-    if (form.elements.sitio && form.elements.sitio.value) { form.hidden = true; sent.hidden = false; return; }
-    var data = { _subject: subject, programa_fundadoras: founding ? 'Sí' : 'No' };
+    // Campo trampa: viaja con la solicitud y el servidor decide (aquí nunca se confirma por adelantado).
+    var busy = document.getElementById('form-busy');
+    if (busy) busy.hidden = true;
+    var data = { fundadora: !!founding, sitio: form.elements.sitio ? form.elements.sitio.value : '' };
     Object.keys(labels).forEach(function (name) {
       var v = form.elements[name].value.trim();
       if (v) data[name] = v;
@@ -133,7 +135,12 @@
       body: JSON.stringify(data),
       signal: ctrl ? ctrl.signal : undefined
     }).then(function (res) {
+      if (res.status === 429) { if (busy) busy.hidden = false; return null; }
       if (!res.ok) throw new Error('send');
+      return res.json();
+    }).then(function (body) {
+      if (body === null) return;
+      if (!body || body.ok !== true) throw new Error('send');
       form.hidden = true;
       sent.hidden = false;
       sent.scrollIntoView({ block: 'center' });

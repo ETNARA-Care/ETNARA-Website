@@ -264,3 +264,20 @@ section[id]{scroll-margin-top:76px}
 .footer-links a{color:var(--cream)}
 .footer-links a:hover{color:var(--sage-light)}
 @media (max-width:560px){.founding-cta .pill{width:100%;justify-content:center}.footer-links{flex-direction:column}.check-field{justify-content:flex-start}}
+
+/* Preguntas frecuentes */
+.text-link{color:var(--navy);text-decoration:underline;text-underline-offset:3px}
+.faq{max-width:860px;border-top:1px solid var(--line-2)}
+.faq-item{border-bottom:1px solid var(--line-2)}
+.faq-item summary{list-style:none;cursor:pointer;display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:56px;padding:16px 0;font-family:var(--serif);font-size:clamp(19px,2vw,22px);line-height:1.25;color:var(--navy)}
+.faq-item summary::-webkit-details-marker{display:none}
+.faq-item summary::after{content:"+";flex:none;width:32px;height:32px;border-radius:50%;border:1px solid var(--line-2);display:grid;place-items:center;font-family:var(--sans);font-size:20px;line-height:1;color:var(--sage-ink);transition:transform .2s}
+.faq-item[open] summary::after{content:"–"}
+.faq-item summary:focus-visible{outline:2px solid var(--sage);outline-offset:4px;border-radius:6px}
+.faq-item p{font-size:16px;line-height:1.65;color:var(--muted);max-width:720px;padding:0 48px 20px 0}
+@media (max-width:560px){.faq-item p{padding-right:0}}
+
+/* Formulario: envío directo */
+.hp-field{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
+.form-note[hidden],#form-sent[hidden]{display:none}
+.demo-form button.pill[disabled]{opacity:.6;cursor:progress}

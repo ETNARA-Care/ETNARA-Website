@@ -33,7 +33,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,400&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="./styles.css?v=4">
+<link rel="stylesheet" href="./styles.css?v=5">
 </head>
 <body>
 
@@ -256,6 +256,52 @@
   </div>
 </section>
 
+<section class="section section-sand" id="preguntas">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div>
+        <p class="kicker kicker-navy">PREGUNTAS FRECUENTES</p>
+        <h2>Lo que más nos <em>preguntan.</em></h2>
+      </div>
+      <p>¿Tienes otra duda? Escríbenos a <a class="text-link" href="mailto:contacto@etnaracare.com">contacto@etnaracare.com</a>.</p>
+    </div>
+    <div class="faq reveal">
+      <details class="faq-item">
+        <summary>¿Para quién es ETNARA Care?</summary>
+        <p>Para agencias de cuido en el hogar y hogares de adultos mayores en Puerto Rico. La usan la administración, la supervisión, los cuidadores y las familias, cada quien con su propia vista.</p>
+      </details>
+      <details class="faq-item">
+        <summary>¿ETNARA provee cuidadores o servicios de cuidado?</summary>
+        <p>No. ETNARA Care es una plataforma tecnológica para que tu organización administre su propia operación. No provee cuidadores ni presta servicios de cuidado o servicios médicos.</p>
+      </details>
+      <details class="faq-item">
+        <summary>¿Funciona en el celular?</summary>
+        <p>Sí. Se usa desde el navegador del iPhone o de Android, sin descargar nada de una tienda, y puedes añadirla a la pantalla de inicio. También funciona en computadora y tableta.</p>
+      </details>
+      <details class="faq-item">
+        <summary>¿Cómo se protegen los datos de mi agencia?</summary>
+        <p>Los datos de cada organización están separados y cada persona ve solo lo que le corresponde según su rol. La conexión con la plataforma es cifrada. ETNARA no vende tus datos ni los usa para publicidad.</p>
+      </details>
+      <details class="faq-item">
+        <summary>¿Las familias pueden ver información?</summary>
+        <p>Solo si tu agencia las invita, y solo lo que tu agencia decide compartir sobre su familiar. Tu agencia puede retirar ese acceso cuando quiera.</p>
+      </details>
+      <details class="faq-item">
+        <summary>¿Cuánto cuesta?</summary>
+        <p>Depende del tamaño de tu organización y de las funciones que necesites. En la demostración conocemos tu operación y te presentamos una propuesta por escrito, sin compromiso.</p>
+      </details>
+      <details class="faq-item">
+        <summary>¿Qué pasa si quiero cancelar?</summary>
+        <p>Las condiciones de cada agencia, incluida la cancelación, se acuerdan por escrito antes de empezar. Nada se cobra ni se renueva sin tu aceptación expresa.</p>
+      </details>
+      <details class="faq-item">
+        <summary>¿Cuánto tarda empezar?</summary>
+        <p>Te acompañamos a cargar tu personal, tus residentes y tus documentos, y capacitamos a tu equipo en español. Puedes empezar por un área y sumar el resto a tu ritmo.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
 <section class="cta" id="demo">
   <div class="wrap reveal">
     <h2>Menos llamadas, menos papeles, <em>más cuidado.</em></h2>
@@ -304,10 +350,19 @@
         <input id="f-fundadora" name="fundadora" type="checkbox">
         <span>Quiero participar en el programa de Agencias Fundadoras</span>
       </label>
+      <div class="hp-field" aria-hidden="true">
+        <label for="f-sitio">No llenes este campo</label>
+        <input id="f-sitio" name="sitio" type="text" tabindex="-1" autocomplete="off">
+      </div>
       <p class="form-error" id="form-error" role="alert" hidden>Completa tu nombre, la agencia, el teléfono y las dos opciones.</p>
       <button class="pill pill-cream pill-lg field-wide" type="submit">Pedir una demostración</button>
-      <p class="form-note field-wide">Al enviar se abrirá tu correo con el mensaje listo para <b>contacto@etnaracare.com</b>. Solo tienes que tocar Enviar.</p>
+      <p class="form-note field-wide" id="form-note-mail">Al enviar se abrirá tu correo con el mensaje listo para <b>contacto@etnaracare.com</b>. Solo tienes que tocar Enviar.</p>
+      <p class="form-note field-wide" id="form-note-direct" hidden>Usamos tus datos solo para contactarte sobre ETNARA Care.</p>
     </form>
+    <div class="form-done" id="form-sent" role="status" hidden>
+      <p class="done-title">¡Recibido! Gracias.</p>
+      <p>Te contactaremos pronto al teléfono que nos dejaste. Si prefieres, escríbenos a <a href="mailto:contacto@etnaracare.com">contacto@etnaracare.com</a>.</p>
+    </div>
     <div class="form-done" id="form-done" hidden>
       <p class="done-title">¡Gracias! Ya casi está.</p>
       <p>Si tu correo no se abrió, copia el mensaje y envíalo a <a href="mailto:contacto@etnaracare.com">contacto@etnaracare.com</a>.</p>
@@ -339,6 +394,6 @@
   </div>
 </footer>
 
-<script src="./script.js?v=4"></script>
+<script src="./script.js?v=5"></script>
 </body>
 </html>

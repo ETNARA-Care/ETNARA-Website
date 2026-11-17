@@ -59,13 +59,26 @@
   }
 })();
 
-// Formulario de demo: valida y abre un correo listo para enviar.
+// Formulario de demo.
+// FORM_ENDPOINT vacío: valida y abre un correo listo para enviar (comportamiento de siempre).
+// FORM_ENDPOINT con la dirección del backend de ETNARA (ver docs/formulario-backend.md): envía la
+// solicitud (POST JSON) y muestra «¡Recibido!» SOLO cuando el servidor confirma {"ok":true}.
+// 429 = demasiadas solicitudes (mensaje propio). Cualquier otro fallo cae al correo como respaldo.
 (function () {
+  var FORM_ENDPOINT = '';
   var TO = 'contacto@etnaracare.com';
   var form = document.getElementById('demo-form');
   if (!form) return;
   var errorBox = document.getElementById('form-error');
   var done = document.getElementById('form-done');
+  var sent = document.getElementById('form-sent');
+  var submitBtn = form.querySelector('button[type="submit"]');
+  if (FORM_ENDPOINT) {
+    var noteMail = document.getElementById('form-note-mail');
+    var noteDirect = document.getElementById('form-note-direct');
+    if (noteMail) noteMail.hidden = true;
+    if (noteDirect) noteDirect.hidden = false;
+  }
   var required = ['nombre', 'agencia', 'telefono', 'empleados', 'tipo'];
   var labels = { nombre: 'Nombre', agencia: 'Agencia u hogar', telefono: 'Teléfono', email: 'Correo', empleados: 'Empleados', tipo: 'Tipo', mensaje: 'Qué quiere resolver' };
 
@@ -96,9 +109,48 @@
     if (box) box.value = 'Para: ' + TO + '\nAsunto: ' + subject + '\n\n' + body;
     var again = document.getElementById('mail-again');
     if (again) again.href = mailto;
-    form.hidden = true;
-    done.hidden = false;
-    window.location.href = mailto;
+    var byMail = function () {
+      form.hidden = true;
+      done.hidden = false;
+      window.location.href = mailto;
+    };
+    if (!FORM_ENDPOINT) { byMail(); return; }
+    // Campo trampa: viaja con la solicitud y el servidor decide (aquí nunca se confirma por adelantado).
+    var busy = document.getElementById('form-busy');
+    if (busy) busy.hidden = true;
+    var data = { fundadora: !!founding, sitio: form.elements.sitio ? form.elements.sitio.value : '' };
+    Object.keys(labels).forEach(function (name) {
+      var v = form.elements[name].value.trim();
+      if (v) data[name] = v;
+    });
+    var label = submitBtn.textContent;
+    submitBtn.disabled = true;
+    submitBtn.textContent = 'Enviando…';
+    var timer = null;
+    var ctrl = ('AbortController' in window) ? new AbortController() : null;
+    if (ctrl) timer = setTimeout(function () { ctrl.abort(); }, 12000);
+    fetch(FORM_ENDPOINT, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+      body: JSON.stringify(data),
+      signal: ctrl ? ctrl.signal : undefined
+    }).then(function (res) {
+      if (res.status === 429) { if (busy) busy.hidden = false; return null; }
+      if (!res.ok) throw new Error('send');
+      return res.json();
+    }).then(function (body) {
+      if (body === null) return;
+      if (!body || body.ok !== true) throw new Error('send');
+      form.hidden = true;
+      sent.hidden = false;
+      sent.scrollIntoView({ block: 'center' });
+    }).catch(function () {
+      byMail();
+    }).then(function () {
+      if (timer) clearTimeout(timer);
+      submitBtn.disabled = false;
+      submitBtn.textContent = label;
+    });
   });
 
   var copy = document.getElementById('copy-message');

@@ -363,3 +363,17 @@ section[id]{scroll-margin-top:76px}
 .footer-social a{width:44px;height:44px;display:grid;place-items:center;border-radius:50%;border:1px solid #1D3A5E;color:var(--sage-light);transition:color .15s,border-color .15s,background .15s}
 .footer-social a:hover,.footer-social a:focus-visible{color:var(--cream);border-color:var(--sage);background:rgba(143,168,139,.12)}
 .footer-social a:focus-visible{outline:2px solid var(--sage-light);outline-offset:2px}
+
+
+/* Tres planes: vista comercial, sin activar suscripciones ni cobros */
+.pricing-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;margin-top:28px}
+.pricing-card{display:flex;flex-direction:column;gap:18px;padding:30px 24px;border:1px solid var(--line);border-radius:22px;background:#fff;min-width:0}
+.pricing-card.pricing-featured{border:2px solid var(--navy);box-shadow:0 14px 32px rgba(9,43,87,.09)}
+.pricing-name{font-size:1.1rem;font-weight:700;color:var(--navy);margin:0}
+.pricing-price{display:flex;align-items:baseline;gap:10px;flex-wrap:wrap;margin:0}
+.pricing-price strong{font-family:var(--serif);font-size:clamp(2.4rem,4vw,3.5rem);font-weight:600;line-height:1}
+.pricing-price span{font-size:.85rem;color:var(--muted)}
+.pricing-card>p:not(.pricing-name):not(.pricing-price){color:var(--muted);line-height:1.6;margin:0;flex:1}
+.pricing-card .pill{text-align:center;justify-content:center}
+.pricing-note{color:var(--muted);font-size:.88rem;line-height:1.6;margin:22px 0 0}
+@media(max-width:760px){.pricing-grid{grid-template-columns:1fr}.pricing-card{padding:24px}.pricing-price strong{font-size:2.8rem}}

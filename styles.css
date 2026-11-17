@@ -358,7 +358,7 @@ section[id]{scroll-margin-top:76px}
 @media (max-width:900px){.devices{font-size:clamp(5px,1.55vw,12.5px);margin:0 3.2em}}
 
 /* Redes sociales (pie de página) */
-.footer-social{list-style:none;margin:0 0 0 auto;padding:0;display:flex;gap:10px}
+.footer-social{list-style:none;margin:0 0 0 auto;padding:0;display:flex;flex-wrap:wrap;gap:10px}
 @media (max-width:900px){.footer-social{margin-left:0;width:100%}}
 .footer-social a{width:44px;height:44px;display:grid;place-items:center;border-radius:50%;border:1px solid #1D3A5E;color:var(--sage-light);transition:color .15s,border-color .15s,background .15s}
 .footer-social a:hover,.footer-social a:focus-visible{color:var(--cream);border-color:var(--sage);background:rgba(143,168,139,.12)}

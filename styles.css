@@ -377,3 +377,28 @@ section[id]{scroll-margin-top:76px}
 .pricing-card .pill{text-align:center;justify-content:center}
 .pricing-note{color:var(--muted);font-size:.88rem;line-height:1.6;margin:22px 0 0}
 @media(max-width:760px){.pricing-grid{grid-template-columns:1fr}.pricing-card{padding:24px}.pricing-price strong{font-size:2.8rem}}
+
+/* ETNARA Connect (próximamente) */
+.connect{background:var(--navy-deep);color:var(--cream)}
+.connect-head{max-width:760px;margin-bottom:44px}
+.connect-kicker{font-size:12px;letter-spacing:.14em;font-weight:600;color:var(--sage-light);display:inline-flex;align-items:center;gap:12px;flex-wrap:wrap}
+.connect-badge{letter-spacing:.04em;font-size:12.5px;background:var(--sage-light);color:var(--navy-deep);border-radius:999px;padding:5px 12px;font-weight:700}
+.connect-brand{font-family:var(--serif);font-weight:400;font-size:clamp(40px,5vw,64px);letter-spacing:-.01em;margin:18px 0 0;line-height:1.05}
+.connect-brand b{font-weight:600}
+.connect-brand i{color:var(--sage-light)}
+.connect-lead{font-family:var(--serif);font-size:clamp(24px,2.6vw,34px);line-height:1.25;margin-top:18px}
+.connect-lead em{color:var(--sage-light)}
+.connect-desc{font-size:17px;line-height:1.65;color:var(--on-navy);margin-top:16px;max-width:640px}
+.connect-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px}
+.connect-card{background:var(--navy);border:1px solid var(--navy-line);border-radius:20px;padding:28px}
+.connect-ico{width:44px;height:44px;border-radius:12px;display:grid;place-items:center;background:var(--navy-soft);color:var(--sage-light)}
+.connect-card h3{font-size:20px;margin:20px 0 10px}
+.connect-card p{font-size:15px;line-height:1.6;color:var(--on-navy)}
+.connect-note{display:flex;gap:12px;align-items:flex-start;margin-top:20px;border:1px dashed var(--navy-line);border-radius:18px;padding:18px 22px;color:var(--sage-light)}
+.connect-note svg{flex:none;margin-top:2px}
+.connect-note p{margin:0;font-size:14.5px;line-height:1.6;color:var(--on-navy)}
+.connect-note b{color:var(--cream)}
+/* Menú de escritorio en una sola línea con 8 enlaces */
+.nav a,.header-actions a{white-space:nowrap}
+@media (min-width:901px) and (max-width:1240px){.nav{gap:16px;font-size:13px}.header-actions{gap:14px}.header-actions .pill{padding-left:16px;padding-right:16px}}
+@media (min-width:901px) and (max-width:1000px){.nav{gap:11px;font-size:12.5px}.header-actions{gap:10px}}
